@@ -1,0 +1,16 @@
+/* Dark theme styles */
+.dark {
+    background-color: #202124;
+    color: #ffffff;
+}
+
+/* Additional styles for dark theme */
+.dark h1 {
+    color: #ffffff;
+}
+
+.dark nav ul li a {
+    color: #ffffff;
+}
+
+/* Add more styles as needed */
