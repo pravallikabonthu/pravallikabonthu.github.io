@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/connect-four.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Connect Four Game</title>
+    <script src="connect-four.js" defer></script>
+    <script src="app.js"></script>
+</head>
+
+<body onload="initializeBoard(); renderBoard();">
+    
+    <header>
+        
+        <h1>Connect Four Game</h1>
+        <div id="player-turn">  
+            <span id="current-player">Player 1's Turn</span>
+        </div>
+        <a href="index.html" class="home-button">Home</a>
+       
+        <button id="reset-btn" onclick="resetGame()">Reset Game</button>
+    </header>  
+    <div class="board" id="connect-four-board"></div>
+    <div class="claps hidden" id="claps">👏👏👏</div>
+
+
+</body>
+
+</html> 

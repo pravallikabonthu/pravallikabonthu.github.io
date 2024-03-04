@@ -1,0 +1,199 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(7, 60px);
+    grid-template-rows: repeat(6, 60px);
+    gap: 2px;
+    background-color: #0066ff;
+    padding: 5px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    margin: 50px auto;
+    width: 430px;
+}
+
+
+
+.cell {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.cell:hover {
+    background-color: #eee;
+}
+
+.piece {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.piece.red {
+    background-color: #ff3333;
+}
+
+.piece.yellow {
+    background-color: #ffff33;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .board {
+        width: 300px;
+        grid-template-columns: repeat(7, 40px);
+        grid-template-rows: repeat(6, 40px);
+    }
+
+    .cell {
+        width: 40px;
+        height: 40px;
+    }
+
+    .piece {
+        width: 30px;
+        height: 30px;
+        margin: 3px;
+    }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+#player-turn {
+    margin-top: 10px;
+}
+
+
+.player-1 {
+    background-color: red;
+}
+
+.player-2 {
+    background-color: yellow;
+}
+
+
+ #reset-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#reset-btn:hover {
+    background-color: #0056b3;
+}  
+
+
+.cell .piece {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    margin: auto;
+    transition: background-color 0.3s;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.cell .piece.falling {
+    animation: fall 0.5s ease forwards;
+} 
+
+.home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.home-button:hover {
+    background-color: #0056b3;
+}
+
+
+body {
+    background-color: #e8e2e8; /* Change to your desired background color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    animation: gradientAnimation 10s infinite alternate; /* Add background animation */
+
+}
+
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+/* Add your existing CSS styles here */
+
+/* Claps animation */
+@keyframes clapsAnimation {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-20px);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+}
+
+.claps {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    opacity: 0;
+    animation: clapsAnimation 2s ease-out forwards;
+}
+
+.hidden {
+    display: none;
+}
